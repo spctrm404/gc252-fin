@@ -15,16 +15,16 @@ let gen = 0;
 const seed = 1;
 
 function setup() {
-  // const { width: containerWidth, height: containerheight } =
-  //   canvasContainer.getBoundingClientRect();
-  // const renderer = createCanvas(containerWidth, containerheight - 200);
-  // renderer.parent(canvasContainer);
-
-  const renderer = createCanvas(600, 650);
+  const { width: containerWidth, height: containerheight } =
+    canvasContainer.getBoundingClientRect();
+  const renderer = createCanvas(containerWidth, containerheight - 200);
   renderer.parent(canvasContainer);
-  renderer.elt.style.aspectRatio = `${width} / ${height}`;
-  renderer.elt.style.height = "100%";
-  renderer.elt.style.width = "";
+
+  // const renderer = createCanvas(600, 650);
+  // renderer.parent(canvasContainer);
+  // renderer.elt.style.aspectRatio = `${width} / ${height}`;
+  // renderer.elt.style.height = "100%";
+  // renderer.elt.style.width = "";
 
   cellSize = width / cellsPerRow;
   // cellsPerColumn = Math.floor(height / cellSize);
